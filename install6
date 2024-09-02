@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "en/$(whoami)"
+echo "en/$(whoami)......."
 
 sleep 4
 echo "Welcome, $(whoami)...."

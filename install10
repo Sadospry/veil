@@ -70,7 +70,8 @@ sleep 6
 echo -e "Done."
 sleep 4
 echo -e "Install completed. Developed by: Chinhooks_DT."
-sleep 9
+sleep 5
+
 echo -n "File should be in $HOME/Applications/veil if veil folder is inside apps."
 fi
 

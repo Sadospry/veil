@@ -1,8 +1,13 @@
 #!/bin/bash
+TARGET_DIR="$HOME/applications/veil"
 
-README_FILE="readMe.txt"
 
-cat <<EOL > $README_FILE
-  An APP should be called 'Veil_executor'.
-  If there is not one called that then please contact support.
-EOL
+mkdir -p "$TARGET_DIR"
+
+
+README_FILE="$TARGET_DIR/README"
+
+echo "Application Created!"
+sleep 4
+
+echo "App should be in the \"veil\" folder." > "$README_FILE"

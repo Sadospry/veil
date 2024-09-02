@@ -1,9 +1,41 @@
 #!/bin/bash
+echo "Welcome, $(whoami)...."
+sleep 10
+echo "Please wait..."
+sleep 6
+echo "Loading."
+sleep 1
+echo "Loading.."
+sleep 1
+echo "Loading..."
+sleep 1
+echo "Loading...."
+sleep 1
+echo "Loading..."
+sleep 1
+echo "Loading...."
+sleep 1
+echo "Loading....."
+sleep 1
+echo "Loading."
+sleep 1
+echo "Loading.."
+sleep 1
+echo "Loading..."
+sleep 1
+echo "Loading...."
+sleep 1
+echo "Loading....."
+sleep 1
+echo "Loading."
+sleep 1
+echo "Loading.."
+sleep 4 
+echo "Loaded!"
+sleep 4
 
-# Prompt the user for a license key
 read -p "Enter License Key: " license_key
 
-# Check if the entered license key is "12851"
 if [ "$license_key" == "12851" ]; then
     echo "License key accepted. Downloading file..."
 

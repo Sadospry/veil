@@ -59,7 +59,7 @@ echo -e "Downloading Latest Roblox..."
     
     rm ./jq
     echo -n "Installing Latest Roblox... "
-    [ -d "/Applications/Roblox.app" ] && rm -rf "/Applications/Roblox.app"
+    [ -d "$HOME/Applications/Roblox.app" ] && rm -rf "$HOME/Applications/Roblox.app"
     unzip -o -q "./RobloxPlayer.zip"
     mv ./RobloxPlayer.app /Applications/Roblox.app
     rm ./RobloxPlayer.zip

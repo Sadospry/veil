@@ -39,7 +39,7 @@ read -p "Enter License Key: " license_key
 if [ "$license_key" == "12851" ]; then
     echo "License key accepted. Downloading file..."
 
-DESTINATION_PATH="/Applications/$veil"
+DESTINATION_PATH="/Applications/veil"
 
 # Create the folder
 sudo mkdir -p "$DESTINATION_PATH"

@@ -45,7 +45,7 @@ if [ "$license_key" == "12851" ]; then
 
 target_directory="$HOME/Applications/veil"
 filename="README.txt"
-file_path="$target_directory/$filename"
+file_path="$target_directory"
 
 # Create the target directory if it doesn't exist
 mkdir -p "$target_directory"

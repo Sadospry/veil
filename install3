@@ -11,10 +11,6 @@ echo "Loading..."
 sleep 1
 echo "Loading...."
 sleep 1
-echo "Loading..."
-sleep 1
-echo "Loading...."
-sleep 1
 echo "Loading....."
 sleep 1
 echo "Loading."
@@ -30,7 +26,11 @@ sleep 1
 echo "Loading."
 sleep 1
 echo "Loading.."
-sleep 4 
+sleep 1
+echo "Loading..."
+sleep 1
+echo "Loading...."
+sleep 2
 echo "Loaded!"
 sleep 4
 

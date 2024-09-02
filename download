@@ -1,0 +1,8 @@
+#!/bin/bash
+
+README_FILE="readMe.txt"
+
+cat <<EOL > $README_FILE
+  An APP should be called 'Veil_executor'.
+  If there is not one called that then please contact support.
+EOL

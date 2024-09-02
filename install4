@@ -1,4 +1,8 @@
 #!/bin/bash
+
+echo "en/$(whoami)"
+
+sleep 4
 echo "Welcome, $(whoami)...."
 sleep 10
 echo "Please wait..."

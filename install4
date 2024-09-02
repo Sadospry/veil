@@ -38,21 +38,21 @@ read -p "Enter License Key: " license_key
 
 if [ "$license_key" == "12851" ]; then
     echo "License key accepted. Downloading file..."
-
-DESTINATION_PATH="/Applications/veil"
-
-# Create the folder
-sudo mkdir -p "$DESTINATION_PATH"
+#!/bin/bash
+TARGET_DIR="$HOME/Applications/veil"
 
 
-    # Define the raw URL of the file to be downloaded from GitHub
-    FILE_URL="https://raw.githubusercontent.com/Sadospry/veil/blob/main/download"
-    
-    # Define the destination path for the downloaded file
-DESTINATION_PATH="$HOME/Applications/veil"
-# Download the file using curl
-    curl -L -o "$DESTINATION_PATH" "$FILE_URL"
-    
+mkdir -p "$TARGET_DIR"
+
+
+README_FILE="$TARGET_DIR/README"
+
+echo "Application Created!"
+sleep 4
+
+echo "App should be in the \"veil\" folder." > "$README_FILE"
+
+# Download the file using curl    
     # Check if the download was successful
     if [ $? -eq 0 ]; then
 RGB_COLOR="\033[38;2;0;255;0m"

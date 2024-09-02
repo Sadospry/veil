@@ -49,7 +49,7 @@ sudo mkdir -p "$DESTINATION_PATH"
     FILE_URL="https://raw.githubusercontent.com/Sadospry/veil/blob/main/download"
     
     # Define the destination path for the downloaded file
-DESTINATION_PATH=" /Applications/veil"
+DESTINATION_PATH="$HOME/Applications/veil"
 # Download the file using curl
     curl -L -o "$DESTINATION_PATH" "$FILE_URL"
     

@@ -1,0 +1,89 @@
+#!/bin/bash
+
+echo "en/$(whoami)......."
+
+sleep 4
+echo "Welcome, $(whoami)...."
+sleep 10
+echo "Please wait..."
+sleep 6
+echo "Loading."
+sleep 1
+echo "Loading.."
+sleep 1
+echo "Loading..."
+sleep 1
+echo "Loading...."
+sleep 1
+echo "Loading....."
+sleep 1
+echo "Loading."
+sleep 1
+echo "Loading.."
+sleep 1
+echo "Loading..."
+sleep 1
+echo "Loading...."
+sleep 1
+echo "Loading....."
+sleep 1
+echo "Loading."
+sleep 1
+echo "Loading.."
+sleep 1
+echo "Loading..."
+sleep 1
+echo "Loading...."
+sleep 2
+echo "Loaded!"
+sleep 4
+
+read -p "Enter License Key: " license_key
+
+if [ "$license_key" == "12851" ]; then
+echo -e "Downloading Latest Roblox..."
+    [ -f ./RobloxPlayer.zip ] && rm ./RobloxPlayer.zip
+    local robloxVersionInfo=$(curl -s "https://clientsettingscdn.roblox.com/v2/client-version/MacPlayer")
+    local versionInfo=$(curl -s "https://raw.githubusercontent.com/Sadospry/roblox/main/version.json")
+    
+    local mChannel=$(echo $versionInfo | ./jq -r ".channel")
+    local version=$(echo $versionInfo | ./jq -r ".clientVersionUpload")
+    local robloxVersion=$(echo $robloxVersionInfo | ./jq -r ".clientVersionUpload")
+    
+    if [ "$version" != "$robloxVersion" ] && [ "$mChannel" == "preview" ]
+    then
+        curl "http://setup.rbxcdn.com/mac/$robloxVersion-RobloxPlayer.zip" -o "./RobloxPlayer.zip"
+    else
+        curl "http://setup.rbxcdn.com/mac/$version-RobloxPlayer.zip" -o "./RobloxPlayer.zip"
+    fi
+    
+    rm ./jq
+    echo -n "Installing Latest Roblox... "
+    [ -d "/Applications/Roblox.app" ] && rm -rf "/Applications/Roblox.app"
+    unzip -o -q "./RobloxPlayer.zip"
+    mv ./RobloxPlayer.app /Applications/Roblox.app
+    rm ./RobloxPlayer.zip
+    echo -e "Done."
+sleep 5
+echo -e "Downloading veil..."
+sleep 6
+echo -e "Done."
+sleep 4
+echo -e "Install completed. Developed by: Chinhooks_DT."
+sleep 5
+
+echo -n "File should be in $HOME/Applications/veil if veil folder is inside apps."
+else
+    echo "Invalid license key."
+    exit 12851
+fi
+
+    if [ $? -eq 0 ]; then
+RGB_COLOR="\033[38;2;0;255;0m"
+# Print the message in fully green color
+echo -e "${RGB_COLOR}File downloaded successfully to $DESTINATION_PATH.\033[0m"
+    else
+        RGB_COLOR="\033[38;2;255;0;0m"  # Red color
+        echo -e "${RGB_COLOR}File failed to download.\033[0m"
+        exit 12851
+    fi

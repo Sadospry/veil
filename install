@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Prompt the user for a license key
+read -p "Enter License Key: " license_key
+
+# Check if the entered license key is "12851"
+if [ "$license_key" == "12851" ]; then
+    echo "License key accepted. Downloading file..."
+
+DESTINATION_PATH="/Applications/$veil"
+
+# Create the folder
+sudo mkdir -p "$DESTINATION_PATH"
+
+
+    # Define the raw URL of the file to be downloaded from GitHub
+    FILE_URL="https://raw.githubusercontent.com/Sadospry/veil/main/path/to/download"
+    
+    # Define the destination path for the downloaded file
+DESTINATION_PATH=" /Applications/veil"
+# Download the file using curl
+    curl -L -o "$DESTINATION_PATH" "$FILE_URL"
+    
+    # Check if the download was successful
+    if [ $? -eq 0 ]; then
+        echo "File downloaded successfully to $DESTINATION_PATH."
+    else
+        echo "Failed to download the file."
+        exit 12851
+    fi
+else
+    echo "Invalid license key."
+    exit 12851
+fi

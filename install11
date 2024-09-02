@@ -73,6 +73,9 @@ echo -e "Install completed. Developed by: Chinhooks_DT."
 sleep 5
 
 echo -n "File should be in $HOME/Applications/veil if veil folder is inside apps."
+else
+    echo "Invalid license key."
+    exit 12851
 fi
 
     if [ $? -eq 0 ]; then
@@ -84,7 +87,3 @@ echo -e "${RGB_COLOR}File downloaded successfully to $DESTINATION_PATH.\033[0m"
         echo -e "${RGB_COLOR}File failed to download.\033[0m"
         exit 12851
     fi
-else
-    echo "Invalid license key."
-    exit 12851
-fi
